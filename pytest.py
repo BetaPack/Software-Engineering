@@ -14,7 +14,7 @@ def test_subtract():
 
 def test_divide():
     result = divide(5,2)
-    assert result==2.5, f"Test Failed: Expectected 2.5 and got {div}"
+    assert result==2.5, f"Test Failed: Expectected 2.5 and got {result}"
     print("Test Passed!!!")
 
 if __name__ == "__main__":
