@@ -9,7 +9,7 @@ def test_add():
 def test_subtract():
     # This is a failing test
     div = subtract(5,3)
-    assert div== 1, f"Test Failed: Expectected 2 and got {div}"
+    assert div==2, f"Test Failed: Expectected 2 and got {div}"
     print("Test Passed!!!")
 
 if __name__ == "__main__":
