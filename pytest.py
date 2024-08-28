@@ -1,4 +1,4 @@
-from operations import add, subtract
+from operations import *
 
 def test_add():
     # This is a passing test
