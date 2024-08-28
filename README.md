@@ -14,8 +14,6 @@ We are a group of three students: **Aditya Singh**, **Bahare Riahi**, and **Moni
 ![Python](https://img.shields.io/badge/language-Python-blue)
 ![License](https://img.shields.io/badge/license-BSD--2--Clause-orange)
 ![Platform](https://img.shields.io/badge/platform-Linux-green)
-![Test Status](https://github.com/your-org/your-repo/actions/workflows/python-app.yml/badge.svg)
-![Coverage](https://img.shields.io/badge/coverage-80%25-brightgreen)
 
 ---
 
