@@ -1,0 +1,25 @@
+from operations import add, subtract
+
+def test_add():
+    # This is a passing test
+    result = add(2, 3)
+    assert result == 5, f"Test Failed: Expectected 5 and got {result}"
+    print("Test Passed!!!")
+
+def test_subtract():
+    # This is a failing test
+    div = subtract(5,3)
+    assert div== 1, f"Test Failed: Expectected 2 and got {div}"
+    print("Test Passed!!!")
+
+if __name__ == "__main__":
+    
+    try:
+        test_add()
+    except AssertionError as e:
+        print(e)
+
+    try:
+        test_subtract()
+    except AssertionError as e:
+        print(e)
