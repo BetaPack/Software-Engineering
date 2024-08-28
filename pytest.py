@@ -12,6 +12,11 @@ def test_subtract():
     assert div==2, f"Test Failed: Expectected 2 and got {div}"
     print("Test Passed!!!")
 
+def test_divide():
+    result = divide(5,2)
+    assert result==2.5, f"Test Failed: Expectected 2.5 and got {div}"
+    print("Test Passed!!!")
+
 if __name__ == "__main__":
     
     try:
@@ -21,5 +26,10 @@ if __name__ == "__main__":
 
     try:
         test_subtract()
+    except AssertionError as e:
+        print(e)
+
+    try:
+        test_divide()
     except AssertionError as e:
         print(e)
