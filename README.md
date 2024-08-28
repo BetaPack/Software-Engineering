@@ -1,3 +1,3 @@
-# Software-Engineering
-This is a group project for Software Engineering course under Dr Tim Menzies at NCSU
-![betapackmessage](https://img.shields.io/badge/BetaPack-purple)
+![Python](https://img.shields.io/badge/language-Python-blue)
+![License](https://img.shields.io/badge/license-BSD--2--Clause-orange)
+![Platform](https://img.shields.io/badge/platform-Linux-green)
