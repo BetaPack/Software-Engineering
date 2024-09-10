@@ -1,3 +1,14 @@
+# Software Engineering Project - CSC 510-001 (Fall 2024)
+
+We are a group of three students:[**Aditya Singh**](https://github.com/adii711), [**Bahare Riahi**](https://github.com/BahareCS), and [**Monish Erode Sridhar**](https://github.com/MonishESGit) under the supervision of **Dr. Tim Menzies** for the Software Engineering course CSC 510-001 at North Carolina State University.
+
+## Instructor Information
+- **Professor**: Tim Menzies
+- **Email**: timm@ieee.org
+- **Department**: Computer Science, NC State University
+
+---
+
 ### Badges
 
 ![Python](https://img.shields.io/badge/language-Python-blue)
