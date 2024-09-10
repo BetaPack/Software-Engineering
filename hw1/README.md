@@ -15,7 +15,7 @@ We are a group of three students:[**Aditya Singh**](https://github.com/adii711),
 ![License](https://img.shields.io/badge/license-BSD--2--Clause-orange)
 ![Platform](https://img.shields.io/badge/platform-Linux-green)
 ![Pytest](https://github.com/BetaPack/Software-Engineering/actions/workflows/python-app.yml/badge.svg)
-![Coverage](https://img.shields.io/badge/coverage-100%-green)
+![Coverage](https://img.shields.io/badge/coverage-100%25-green?label=coverage&color=green)
 
 ---
 
