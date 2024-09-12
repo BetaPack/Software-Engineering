@@ -1,13 +1,13 @@
-from hw2_debugging import mergeSort
+from hw2_debugging import merge_sort
 import rand
 
 def test_edge_cases_array():
-    "Testing the mergeSort function by providing an empty array"
+    "Testing the merge_sort function by providing an empty array"
     empty_arr = []
-    result1 = mergeSort(empty_arr)
+    result1 = merge_sort(empty_arr)
 
     single_element_arr = [5]
-    result2 = mergeSort(single_element_arr)
+    result2 = merge_sort(single_element_arr)
 
     error_string = ""
 
@@ -23,10 +23,10 @@ def test_edge_cases_array():
 
 def test_unsorted_array():
     """
-    Testing the mergeSort function by providing an random unsorted array
+    Testing the merge_sort function by providing an random unsorted array
     """
     unsorted_arr = rand.random_array([None] * 20)
-    result = mergeSort(unsorted_arr)  
+    result = merge_sort(unsorted_arr)  
     sorted_arr = unsorted_arr.copy()
     sorted_arr.sort()
 
@@ -40,8 +40,8 @@ def test_sorted_array():
     sorted_arr.sort()
     reverse_sorted_arr = sorted_arr[::-1]
 
-    result1 = mergeSort(sorted_arr)
-    result2 = mergeSort(reverse_sorted_arr)
+    result1 = merge_sort(sorted_arr)
+    result2 = merge_sort(reverse_sorted_arr)
 
     error_string = ""
 
