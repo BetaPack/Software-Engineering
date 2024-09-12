@@ -17,7 +17,7 @@ logging.basicConfig(
     encoding='utf-8',
     level=logging.DEBUG,
     format='%(asctime)s %(message)s'
-    )
+)
 logging.debug("CORRECT LOG")
 logger = logging.getLogger("Debugging HW2")
 
@@ -25,9 +25,11 @@ unsorted_arr = rand.random_array([None] * 20)
 logger.debug("Generated random array: %s", unsorted_arr)
 
 if any(x is None for x in unsorted_arr):
-    logger.error("Array contains None values after generation! Check random_array function.")
+    logger.error(
+        "Array contains None values after generation! Check random_array function.")
 else:
     logger.debug("Array correctly generated with no None values.")
+
 
 def merge_sort(arr):
     """
@@ -54,6 +56,7 @@ def merge_sort(arr):
     logging.debug("Right half sorted: %s", right_sorted)
     return recombine(left_sorted, right_sorted)
 
+
 def recombine(left_arr, right_arr):
     """
     Function to merge two sorted lists into a single sorted list.
@@ -63,11 +66,14 @@ def recombine(left_arr, right_arr):
     right_arr (list): The second sorted list.
 
     Returns:
-    list: A merged and sorted list containing all elements from `left_arr` 
+    list: A merged and sorted list containing all elements from `left_arr`
     and `right_arr`.
     """
 
-    logger.debug("Recombining arrays: Left = %s, Right = %s", left_arr, right_arr)
+    logger.debug(
+        "Recombining arrays: Left = %s, Right = %s",
+        left_arr,
+        right_arr)
     left_index = 0
     right_index = 0
     merge_arr = [None] * (len(left_arr) + len(right_arr))
@@ -76,7 +82,7 @@ def recombine(left_arr, right_arr):
         if left_arr[left_index] is None or right_arr[right_index] is None:
             logger.error(
                 "None value encountered in recombine! Left: %s, Right: %s",
-                 left_arr[left_index], right_arr[right_index])
+                left_arr[left_index], right_arr[right_index])
             return merge_arr
 
         if left_arr[left_index] < right_arr[right_index]:
@@ -96,6 +102,7 @@ def recombine(left_arr, right_arr):
 
     logger.debug("Merged array: %s", merge_arr)
     return merge_arr
+
 
 arr_out = merge_sort(unsorted_arr)
 logger.debug("Final sorted array: %s", arr_out)

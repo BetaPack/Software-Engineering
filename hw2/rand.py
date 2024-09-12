@@ -2,7 +2,7 @@
 Random Array Generation in range [1,20]
 
 Functions:
-- random_array: Replaces every element in a given list with a random 
+- random_array: Replaces every element in a given list with a random
   integer in range [1,20]
 
 """
@@ -27,7 +27,7 @@ def random_array(arr):
         shuffled_num = subprocess.run(
             ["shuf", "-i1-20", "-n1"],
             capture_output=True,
-            check = True
-            )
+            check=True
+        )
         arr[i] = int(shuffled_num.stdout)
     return arr
