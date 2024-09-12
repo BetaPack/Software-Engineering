@@ -31,8 +31,7 @@ def recombine(leftArr, rightArr):
     return mergeArr
 
 
-# arr = rand.random_array([] * 20)
-arr = [21, 10, 2, 100, 76, 3, 0, 19, 11, 7]
-arr_out = mergeSort([arr])
+arr = rand.random_array([None] * 20)
+arr_out = mergeSort(arr)
 
 print(arr_out)
