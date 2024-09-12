@@ -3,8 +3,7 @@ import rand
 import os
 
 # Set up logging configuration
-os.makedirs(os.path.join(os.getcwd(), 'hw2/logs'), exist_ok=True)
-logging.basicConfig(filename=os.path.join(os.getcwd(), 'hw2/logs/hw2_debugging.log'), encoding='utf-8', level=logging.DEBUG, format='%(asctime)s %(message)s')
+logging.basicConfig(filename = hw2_debugging.log, encoding = 'utf-8', level = logging.DEBUG, format = '%(asctime)s %(message)s')
 logger = logging.getLogger("Debugging HW2")
 
 def mergeSort(arr):
@@ -49,7 +48,7 @@ def recombine(leftArr, rightArr):
     logger.debug(f"Merged array: {mergeArr}")
     return mergeArr
 
-# Generate random array using the rand library
+
 arr = rand.random_array([None] * 20)
 logger.debug(f"Initial array: {arr}")
 
