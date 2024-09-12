@@ -3,7 +3,7 @@ import rand
 import os
 
 # Set up logging configuration
-logging.basicConfig(filename = hw2_debugging.log, encoding = 'utf-8', level = logging.DEBUG, format = '%(asctime)s %(message)s')
+logging.basicConfig(filename = "hw2_debugging.log", encoding = 'utf-8', level = logging.DEBUG, format = '%(asctime)s %(message)s')
 logger = logging.getLogger("Debugging HW2")
 
 def mergeSort(arr):
