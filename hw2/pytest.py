@@ -27,7 +27,8 @@ def test_unsorted_array():
     """
     unsorted_arr = rand.random_array([None] * 20)
     result = mergeSort(unsorted_arr)  
-    sorted_arr = unsorted_arr.sort()
+    sorted_arr = unsorted_arr.copy()
+    sorted_arr.sort()
 
     assert result==sorted_arr, f"Test Case: 'Unsorted Array' - Failed !!!"
     print("Test Case: 'Unsorted Array' - Passed !!!")
@@ -35,7 +36,8 @@ def test_unsorted_array():
 
 def test_sorted_array():
     unsorted_arr = rand.random_array([None] * 20)
-    sorted_arr = unsorted_arr.sort()
+    sorted_arr = unsorted_arr.copy()
+    sorted_arr.sort()
     reverse_sorted_arr = sorted_arr[::-1]
 
     result1 = mergeSort(sorted_arr)
