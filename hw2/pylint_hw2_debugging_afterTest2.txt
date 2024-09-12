@@ -1,0 +1,27 @@
+************* Module hw2_debugging
+hw2_debugging.py:5:0: C0301: Line too long (122/100) (line-too-long)
+hw2_debugging.py:18:0: C0303: Trailing whitespace (trailing-whitespace)
+hw2_debugging.py:23:0: C0303: Trailing whitespace (trailing-whitespace)
+hw2_debugging.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+hw2_debugging.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
+hw2_debugging.py:8:0: C0103: Function name "mergeSort" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:8:14: W0621: Redefining name 'arr' from outer scope (line 51) (redefined-outer-name)
+hw2_debugging.py:9:4: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+hw2_debugging.py:21:0: C0116: Missing function or method docstring (missing-function-docstring)
+hw2_debugging.py:21:14: C0103: Argument name "leftArr" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:21:23: C0103: Argument name "rightArr" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:22:4: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+hw2_debugging.py:24:4: C0103: Variable name "leftIndex" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:25:4: C0103: Variable name "rightIndex" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:26:4: C0103: Variable name "mergeArr" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:32:12: C0103: Variable name "leftIndex" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:35:12: C0103: Variable name "rightIndex" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:40:8: C0103: Variable name "leftIndex" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:45:8: C0103: Variable name "rightIndex" doesn't conform to snake_case naming style (invalid-name)
+hw2_debugging.py:47:4: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+hw2_debugging.py:52:0: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+hw2_debugging.py:56:0: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+
+------------------------------------------------------------------
+Your code has been rated at 3.89/10 (previous run: 3.89/10, +0.00)
+
