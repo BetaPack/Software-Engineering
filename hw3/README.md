@@ -2,18 +2,6 @@
 
 This repository demonstrates the setup of Vim (or Neovim) along with three essential plugins: **NERDTree**, **FuzzyFinder (fzf)**, and **CVcolorscheme**. These plugins enhance file navigation, fuzzy searching, and aesthetic appeal within the text editor.
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Requirements](#requirements)
-- [Installation Steps](#installation-steps)
-- [Plugin Installation](#plugin-installation)
-- [Usage](#usage)
-- [Key Bindings](#key-bindings)
-- [Screenshots](#screenshots)
-- [Submitting Homework](#submitting-homework)
-
----
-
 ## Introduction
 
 Vim and Neovim are powerful text editors known for their efficiency, especially when combined with the right plugins. This guide will help you configure your Vim/Neovim setup with:
