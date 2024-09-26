@@ -1,5 +1,8 @@
 " Initialize the plugin manager (vim-plug)
 call plug#begin('~/.vim/plugged')
+  
+" Add this line for the gruvbox plugin
+Plug 'morhetz/gruvbox'
 
 " NerdTree for file navigation
 Plug 'preservim/nerdtree'
@@ -22,3 +25,6 @@ nnoremap <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree with Ctrl + N
 
 " FZF key binding
 nnoremap <C-p> :FZF<CR>
+
+colorscheme gruvbox
+set background=light
