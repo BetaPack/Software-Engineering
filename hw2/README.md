@@ -11,14 +11,30 @@ We are a group of three students:[**Aditya Singh**](https://github.com/adii711),
 
 ### Badges
 
-![Python](https://img.shields.io/badge/language-Python-blue)
-![License](https://img.shields.io/badge/license-BSD--2--Clause-orange)
-![Platform](https://img.shields.io/badge/platform-Linux-green)
-![Pytest](https://github.com/BetaPack/Software-Engineering/actions/workflows/python-app.yml/badge.svg)
-![Coverage](https://img.shields.io/badge/coverage-100%25-green?label=coverage&color=green)
-![Pyflakes](https://img.shields.io/badge/lint-pyflakes-blue.svg)
-![Pylint](https://img.shields.io/badge/lint-pylint-yellowgreen.svg)
-![AutoPep8](https://img.shields.io/badge/format-autopep8-brightgreen.svg)
+<a href="https://www.python.org/" target="_blank">
+  ![Python](https://img.shields.io/badge/language-Python-blue)
+</a>
+<a href="https://opensource.org/licenses/BSD-2-Clause" target="_blank">
+  ![License](https://img.shields.io/badge/license-BSD--2--Clause-orange)
+</a>
+<a href="https://www.linux.org/" target="_blank">
+  ![Platform](https://img.shields.io/badge/platform-Linux-green)
+</a>
+<a href="https://github.com/BetaPack/Software-Engineering/actions/workflows/python-app.yml" target="_blank">
+  ![Pytest](https://github.com/BetaPack/Software-Engineering/actions/workflows/python-app.yml/badge.svg)
+</a>
+<a href="https://coveralls.io/github/BetaPack/Software-Engineering" target="_blank">
+  ![Coverage](https://img.shields.io/badge/coverage-100%25-green?label=coverage&color=green)
+</a>
+<a href="https://pypi.org/project/pyflakes/" target="_blank">
+  ![Pyflakes](https://img.shields.io/badge/lint-pyflakes-blue.svg)
+</a>
+<a href="https://pylint.pycqa.org/" target="_blank">
+  ![Pylint](https://img.shields.io/badge/lint-pylint-yellowgreen.svg)
+</a>
+<a href="https://github.com/hhatto/autopep8" target="_blank">
+  ![AutoPep8](https://img.shields.io/badge/format-autopep8-brightgreen.svg)
+</a>
 
 # Homework 2 - Merge Sort Debugging and Static Analysis
 
