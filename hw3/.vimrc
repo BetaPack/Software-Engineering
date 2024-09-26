@@ -8,9 +8,6 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
-" CVcolorscheme for colorschemes
-Plug 'ciaranm/cvcolorscheme'
-
 call plug#end()
 
 " Set options
@@ -25,6 +22,3 @@ nnoremap <C-n> :NERDTreeToggle<CR>   " Toggle NerdTree with Ctrl + N
 
 " FZF key binding
 nnoremap <C-p> :FZF<CR>
-
-" Set colorscheme
-colorscheme cv
