@@ -10,14 +10,14 @@ We are a group of three students:[**Aditya Singh**](https://github.com/adii711),
 ---
 
 ### Badges
-![Python](https://img.shields.io/badge/language-Python-blue)
-![License](https://img.shields.io/badge/license-BSD--2--Clause-orange)
-![Platform](https://img.shields.io/badge/platform-Linux-green)
-![Pytest](https://github.com/BetaPack/Software-Engineering/actions/workflows/python-app.yml/badge.svg)
-![Coverage](https://img.shields.io/badge/coverage-100%25-green?label=coverage&color=green)
-![Pyflakes](https://img.shields.io/badge/lint-pyflakes-blue.svg)
-![Pylint](https://img.shields.io/badge/lint-pylint-yellowgreen.svg)
-![AutoPep8](https://img.shields.io/badge/format-autopep8-brightgreen.svg)
+[![Python](https://img.shields.io/badge/language-Python-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-BSD--2--Clause-orange)](https://opensource.org/licenses/BSD-2-Clause)
+[![Platform](https://img.shields.io/badge/platform-Linux-green)](https://www.linux.org/)
+[![Pytest](https://github.com/BetaPack/Software-Engineering/actions/workflows/python-app.yml/badge.svg)](https://docs.pytest.org/en/latest/)
+[![Coverage](https://img.shields.io/badge/coverage-100%25-green?label=coverage&color=green)](https://coverage.readthedocs.io/)
+[![Pyflakes](https://img.shields.io/badge/lint-pyflakes-blue.svg)](https://github.com/PyCQA/pyflakes)
+[![Pylint](https://img.shields.io/badge/lint-pylint-yellowgreen.svg)](https://pylint.pycqa.org/)
+[![AutoPep8](https://img.shields.io/badge/format-autopep8-brightgreen.svg)](https://github.com/hhatto/autopep8)
 
 # Homework 2 - Merge Sort Debugging and Static Analysis
 
