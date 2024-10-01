@@ -1,5 +1,4 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+# This workflow will install Python dependencies, run tests, lint, and upload coverage to Codecov
 
 name: Python application
 
@@ -14,52 +13,68 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
+
+    # Step 1: Set up Python version
     - name: Set up Python 3.13.0rc1
       uses: actions/setup-python@v3
       with:
-        python-version: ""
+        python-version: '3.13.0-rc1'
+
+    # Step 2: Install dependencies
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest autopep8 pylint pyflakes
+        pip install flake8 pytest autopep8 pylint pyflakes pytest-cov codecov
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    # Step 3: Run flake8 linting on hw1 and hw2
     - name: Lint with flake8
       run: |
-        # stop the build if there are Python syntax errors or undefined names
+        # Linting hw1
         flake8 hw1 --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 hw1 --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-        # stop the build if there are Python syntax errors or undefined names
+        # Linting hw2
         flake8 hw2 --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 hw2 --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    
+
+    # Step 4: Test hw1 using pytest
     - name: Testing hw1 with pytest
       run: |
-        python hw1/pytest.py
+        pytest hw1/pytest.py --cov=hw1 --cov-report=xml
       env:
         PYTHONPATH: ${{ github.workspace }}
-    
+
+    # Step 5: Format code using autopep8
     - name: Run autopep8
       run: |
         autopep8 --in-place --aggressive --aggressive hw2/hw2_debugging.py hw2/rand.py
 
+    # Step 6: Run pylint on hw2 code
     - name: Run pylint
       run: |
         pylint hw2/hw2_debugging.py hw2/rand.py
 
+    # Step 7: Run pyflakes on hw2 code
     - name: Run pyflakes
       run: |
         pyflakes hw2/hw2_debugging.py hw2/rand.py
-    
+
+    # Step 8: Test hw2 using pytest and collect coverage
     - name: Testing hw2 with pytest
       run: |
-        python hw2/pytest.py
+        pytest hw2/pytest.py --cov=hw2 --cov-report=xml
       env:
         PYTHONPATH: ${{ github.workspace }}
+
+    # Step 9: Upload coverage to Codecov
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        files: ./coverage.xml
+        fail_ci_if_error: true
+
