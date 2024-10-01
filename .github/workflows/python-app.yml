@@ -12,69 +12,127 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  # Step 1: Linting job
+  linting:
+    name: Lint with flake8, pylint, pyflakes
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
 
-    # Step 1: Set up Python version
+    # Set up Python version
     - name: Set up Python 3.13.0rc1
       uses: actions/setup-python@v3
       with:
         python-version: '3.13.0-rc1'
 
-    # Step 2: Install dependencies
+    # Install dependencies
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest autopep8 pylint pyflakes pytest-cov codecov
+        pip install flake8 pylint pyflakes autopep8
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    # Step 3: Run flake8 linting on hw1 and hw2
+    # Run flake8 on hw1 and hw2
     - name: Lint with flake8
       run: |
-        # Linting hw1
         flake8 hw1 --count --select=E9,F63,F7,F82 --show-source --statistics
         flake8 hw1 --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-
-        # Linting hw2
         flake8 hw2 --count --select=E9,F63,F7,F82 --show-source --statistics
         flake8 hw2 --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-    # Step 4: Test hw1 using pytest
-    - name: Testing hw1 with pytest
-      run: |
-        pytest hw1/pytest.py --cov=hw1 --cov-report=xml
-      env:
-        PYTHONPATH: ${{ github.workspace }}
-
-    # Step 5: Format code using autopep8
-    - name: Run autopep8
-      run: |
-        autopep8 --in-place --aggressive --aggressive hw2/hw2_debugging.py hw2/rand.py
-
-    # Step 6: Run pylint on hw2 code
+    # Run pylint on hw2
     - name: Run pylint
       run: |
         pylint hw2/hw2_debugging.py hw2/rand.py
 
-    # Step 7: Run pyflakes on hw2 code
+    # Run pyflakes on hw2
     - name: Run pyflakes
       run: |
         pyflakes hw2/hw2_debugging.py hw2/rand.py
 
-    # Step 8: Test hw2 using pytest and collect coverage
-    - name: Testing hw2 with pytest
+  # Step 2: Testing job with pytest
+  testing:
+    name: Run tests with pytest
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # Set up Python version
+    - name: Set up Python 3.13.0rc1
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.13.0-rc1'
+
+    # Install dependencies
+    - name: Install dependencies
       run: |
-        pytest hw2/pytest.py --cov=hw2 --cov-report=xml
+        python -m pip install --upgrade pip
+        pip install pytest pytest-cov
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    # Run pytest on hw1 and hw2 with coverage report
+    - name: Run pytest on hw1
+      run: |
+        pytest hw1/pytest.py --cov=hw1 --cov-report=xml:coverage_hw1.xml
       env:
         PYTHONPATH: ${{ github.workspace }}
 
-    # Step 9: Upload coverage to Codecov
+    - name: Run pytest on hw2
+      run: |
+        pytest hw2/pytest.py --cov=hw2 --cov-report=xml:coverage_hw2.xml
+      env:
+        PYTHONPATH: ${{ github.workspace }}
+
+  # Step 3: Code formatting with autopep8
+  formatting:
+    name: Run autopep8 formatting
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # Set up Python version
+    - name: Set up Python 3.13.0rc1
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.13.0-rc1'
+
+    # Install autopep8
+    - name: Install autopep8
+      run: |
+        pip install autopep8
+
+    # Run autopep8 on hw2
+    - name: Run autopep8
+      run: |
+        autopep8 --in-place --aggressive --aggressive hw2/hw2_debugging.py hw2/rand.py
+
+  # Step 4: Upload coverage to Codecov
+  coverage:
+    name: Upload coverage to Codecov
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # Set up Python version
+    - name: Set up Python 3.13.0rc1
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.13.0-rc1'
+
+    # Install dependencies for Codecov
+    - name: Install Codecov
+      run: |
+        pip install codecov
+
+    # Upload coverage for hw1 and hw2
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
       with:
-        files: ./coverage.xml
+        files: |
+          ./coverage_hw1.xml
+          ./coverage_hw2.xml
         fail_ci_if_error: true
-
