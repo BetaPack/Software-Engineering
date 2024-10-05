@@ -135,4 +135,4 @@ jobs:
         files: |
           ./coverage_hw1.xml
           ./coverage_hw2.xml
-        fail_ci_if_error: true
+        fail_ci_if_error: true
