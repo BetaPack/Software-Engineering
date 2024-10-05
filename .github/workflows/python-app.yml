@@ -133,6 +133,5 @@ jobs:
       uses: codecov/codecov-action@v2
       with:
         files: |
-          ./coverage_hw1.xml
           ./coverage_hw2.xml
         fail_ci_if_error: true
