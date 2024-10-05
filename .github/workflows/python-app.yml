@@ -24,7 +24,7 @@ jobs:
     - name: Set up Python 3.13.0rc1
       uses: actions/setup-python@v3
       with:
-        python-version: '3.13.0-rc1'
+        python-version: ''
 
     # Install dependencies
     - name: Install dependencies
@@ -63,7 +63,7 @@ jobs:
     - name: Set up Python 3.13.0rc1
       uses: actions/setup-python@v3
       with:
-        python-version: '3.13.0-rc1'
+        python-version: ''
 
     # Install dependencies
     - name: Install dependencies
@@ -97,7 +97,7 @@ jobs:
     - name: Set up Python 3.13.0rc1
       uses: actions/setup-python@v3
       with:
-        python-version: '3.13.0-rc1'
+        python-version: ''
 
     # Install autopep8
     - name: Install autopep8
@@ -121,7 +121,7 @@ jobs:
     - name: Set up Python 3.13.0rc1
       uses: actions/setup-python@v3
       with:
-        python-version: '3.13.0-rc1'
+        python-version: ''
 
     # Install dependencies for Codecov
     - name: Install Codecov
