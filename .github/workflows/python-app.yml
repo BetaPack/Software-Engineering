@@ -75,13 +75,13 @@ jobs:
     # Run pytest on hw1 and hw2 with coverage report
     - name: Run pytest on hw1
       run: |
-        pytest hw1/pytest.py --cov=hw1 --cov-report=xml:coverage_hw1.xml
+        pytest hw1/test_hw1.py --cov=hw1 --cov-report=xml:coverage_hw1.xml
       env:
         PYTHONPATH: ${{ github.workspace }}
 
     - name: Run pytest on hw2
       run: |
-        pytest hw2/pytest.py --cov=hw2 --cov-report=xml:coverage_hw2.xml
+        pytest hw2/test_hw2.py --cov=hw2 --cov-report=xml:coverage_hw2.xml
       env:
         PYTHONPATH: ${{ github.workspace }}
 
