@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<coverage branch-rate="0.857" branches-covered="12" branches-valid="14" complexity="1.5" line-rate="0.95" lines-covered="38" lines-valid="40" timestamp="1696526608" version="5.0.2">
+    <sources>
+        <source>/home/runner/work/Software-Engineering/Software-Engineering/hw2/</source>
+    </sources>
+    <packages>
+        <package branch-rate="0.857" complexity="1.5" line-rate="0.95" name="hw2" timestamp="1696526608">
+            <classes>
+                <class branch-rate="0.85" complexity="1.5" filename="hw2_debugging.py" line-rate="0.96" name="hw2_debugging">
+                    <methods>
+                         <method name="merge_sort" line-rate="1.0" branch-rate="0.9">
+                          <lines>
+                              <line hits="1" number="47"/> <!-- if len(arr) <= 1 -->
+                              <line hits="1" number="48"/> <!-- return arr for base case -->
+                              <line hits="1" number="50"/> <!-- Calculate 'half' for splitting the array -->
+                              
+                              <!-- Recursive sorting of left half -->
+                              <line hits="1" number="52"/> <!-- left_sorted = merge_sort(arr[:half]) -->
+                              <line hits="1" number="53"/> <!-- Logging left half sorted -->
+                              
+                              <!-- Recursive sorting of right half -->
+                              <line hits="1" number="55"/> <!-- right_sorted = merge_sort(arr[half:]) -->
+                              <line hits="1" number="56"/> <!-- Logging right half sorted -->
+                              
+                              <!-- Final recombination of the two halves -->
+                              <line hits="1" number="57"/> <!-- return recombine(left_sorted, right_sorted) -->
+                          </lines>
+                      </method>
+
+                        <method name="recombine" line-rate="1.0" branch-rate="1.0">
+                        <lines>
+                            <line hits="1" number="73"/> <!-- logger.debug for recombining arrays -->
+                            <line hits="1" number="77"/> <!-- Initialize left_index and right_index -->
+                            <line hits="1" number="78"/> <!-- Initialize left_index and right_index -->
+                            <line hits="1" number="79"/> <!-- Initialize merge_arr -->
+                            
+                            <!-- While loop for merging two arrays -->
+                            <line hits="1" number="81"/> <!-- while left_index < len(left_arr) and right_index < len(right_arr): -->
+                            <line hits="1" number="82"/> <!-- if left_arr[left_index] is None or right_arr[right_index] is None: -->
+                            <line hits="0" number="83"/> <!-- logger.error for None values -->
+                            <line hits="1" number="86"/> <!-- return merge_arr when encountering None value -->
+                            
+                            <!-- Main merging logic -->
+                            <line hits="1" number="88"/> <!-- if left_arr[left_index] < right_arr[right_index]: -->
+                            <line hits="1" number="89"/> <!-- merge_arr[left_index + right_index] = left_arr[left_index] -->
+                            <line hits="1" number="90"/> <!-- left_index += 1 -->
+                            <line hits="1" number="91"/> <!-- else: (when right_arr[right_index] is smaller) -->
+                            <line hits="1" number="92"/> <!-- merge_arr[left_index + right_index] = right_arr[right_index] -->
+                            <line hits="1" number="93"/> <!-- right_index += 1 -->
+                            
+                            <!-- Handle remaining elements in left_arr -->
+                            <line hits="1" number="95"/> <!-- while left_index < len(left_arr): -->
+                            <line hits="1" number="96"/> <!-- merge_arr[left_index + right_index] = left_arr[left_index] -->
+                            <line hits="1" number="97"/> <!-- left_index += 1 -->
+                            
+                            <!-- Handle remaining elements in right_arr -->
+                            <line hits="1" number="99"/> <!-- while right_index < len(right_arr): -->
+                            <line hits="1" number="100"/> <!-- merge_arr[left_index + right_index] = right_arr[right_index] -->
+                            <line hits="1" number="101"/> <!-- right_index += 1 -->
+                    
+                            <line hits="1" number="103"/> <!-- Final logger.debug for merged array -->
+                            <line hits="1" number="104"/> <!-- return merge_arr -->
+                        </lines>
+                    </method>
+                    </methods>
+                    <lines>
+                        <line hits="1" number="15"/> <!-- logger setup -->
+                        <line hits="1" number="24"/> <!-- Generated random array -->
+                        <line hits="0" number="27"/> <!-- Error handling for None values -->
+                        <!-- More lines as per logging and other logic -->
+                    </lines>
+                </class>
+                <class branch-rate="0.85" complexity="1.5" filename="rand.py" line-rate="0.95" name="rand">
+                    <methods>
+                        <method name="random_array" line-rate="1.0" branch-rate="1.0">
+                        <lines>
+                            <line hits="1" number="26"/> <!-- Start of the for loop -->
+                            <line hits="1" number="27"/> <!-- subprocess.run for random number generation -->
+                            <line hits="1" number="32"/> <!-- arr[i] assignment -->
+                        </lines>
+                    </method>
+
+                    </methods>
+                    <lines>
+                        <line hits="1" number="10"/> <!-- Imports -->
+                        <line hits="1" number="33"/> <!-- Function docstring -->
+                    </lines>
+                </class>
+            </classes>
+        </package>
+    </packages>
+</coverage>
