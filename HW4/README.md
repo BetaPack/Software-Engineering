@@ -11,12 +11,10 @@ We are a group of three students:[**Aditya Singh**](https://github.com/adii711),
 
 ### Badges
 
-![Python](https://img.shields.io/badge/language-Python-blue)
+![Bash](https://img.shields.io/badge/language-Bash-blue)
 ![License](https://img.shields.io/badge/license-BSD--2--Clause-orange)
-![Platform](https://img.shields.io/badge/platform-Linux-green)
-![Pytest](https://github.com/BetaPack/Software-Engineering/actions/workflows/python-app.yml/badge.svg)
-![Coverage](https://img.shields.io/badge/coverage-100%25-green?label=coverage&color=green)
-
+![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS-green)
+![ShellCheck](https://img.shields.io/badge/shellcheck-passing-brightgreen)
 ---
 
 ## Project Description
