@@ -14,7 +14,8 @@ We are a group of three students:[**Aditya Singh**](https://github.com/adii711),
 [![Bash](https://img.shields.io/badge/language-Bash-blue)](https://www.gnu.org/software/bash/)
 [![License](https://img.shields.io/badge/license-BSD--2--Clause-orange)](https://opensource.org/licenses/BSD-2-Clause)
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS-green)](https://www.linux.org/)
-[![ShellCheck](https://img.shields.io/badge/shellcheck-passing-brightgreen)](https://www.shellcheck.net/)
+[![ShellCheck](https://github.com/BetaPack/Software-Engineering/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/BetaPack/Software-Engineering/actions/workflows/shellcheck.yml)
+[![Test](https://github.com/BetaPack/Software-Engineering/actions/workflows/test.yml/badge.svg)](https://github.com/BetaPack/Software-Engineering/actions/workflows/test.yml)
 
 ---
 
