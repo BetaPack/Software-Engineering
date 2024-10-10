@@ -24,4 +24,4 @@ The homework tasks involve scripting and data processing challenges using Bash c
 
 ## Installation
 
-To run this project, make sure you have Python 3.13 installed.
+To run this project, make sure you have Bash installed.
