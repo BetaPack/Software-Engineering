@@ -1,0 +1,15 @@
+name: Test Workflow
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up bash
+      uses: shivammathur/setup-bash@v1
+    - name: Run tests
+      run: |
+        bash Software-Engineering/HW4/task1.sh
+        bash Software-Engineering/HW4/task2.sh
