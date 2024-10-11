@@ -1,1 +1,1 @@
-cd dataset; ls dataset1 | wc -l; grep -c "CSC510" dataset1/file* | awk -F: '$2 >= 3 {print $1}'; grep -c "CSC510" dataset1/file* | awk -F: '$2 >= 3 {print $1}' | xargs ls -l | sort -k5,5nr; grep -c "CSC510" dataset1/file* | awk -F: '$2 >= 3 {print $1}' | xargs ls -l | sort -k5,5nr | sed 's/file_/the_name_/' | gawk '{ print $9 "_filtered" }'
+cd dataset; grep -l "sample" dataset1/file* | xargs grep -o "CSC510" | grep -c "CSC510" dataset1/file* | uniq | grep -E "[3-9]|[0-9]{2,}" | cut -d: -f1 | xargs ls -l | sort -k5,5nr | sed 's/file_/filtered_/'
