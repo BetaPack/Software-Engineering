@@ -1,1 +1,2 @@
-cd dataset; grep -l "sample" dataset1/file* | xargs grep -o "CSC510" | grep -c "CSC510" dataset1/file* | uniq | grep -E "[3-9]|[0-9]{2,}" | cut -d: -f1 | xargs ls -l | sort -k5,5nr | sed 's/file_/filtered_/'
+#!/bin/bash
+grep -rl "sample" dataset/dataset1/ | xargs -I {} bash -c 'count=$(grep -o "CSC510" {} | wc -l); [ $count -ge 3 ] && echo "$count $(wc -c < {}) {}"' | sort -rnk1,1 -rnk2,2 | cut -d' ' -f3 | sed 's/file_/filtered_/'
